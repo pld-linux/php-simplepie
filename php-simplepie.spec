@@ -1,4 +1,5 @@
 Summary:	SimplePie: Super-fast, easy-to-use, RSS and Atom feed parsing in PHP
+Summary(pl.UTF-8):	SimplePie - bardzo szybka, łatwa w użyciu analiza feedów RSS i Atom w PHP
 Name:		simplepie
 Version:	1.0.1
 Release:	1
@@ -23,6 +24,13 @@ SimplePie is a very fast and easy-to-use class, written in PHP, that
 puts the 'simple' back into 'really simple syndication'. Flexible
 enough to suit beginners and veterans alike, SimplePie is focused on
 speed, ease of use, compatibility and standards compliance.
+
+%description -l pl.UTF-8
+SimplePie jest bardzo szybką i łatwą w użyciu, napisaną w PHP klasą
+umieszczającą "proste" z powrotem do "bardzo prostego zbierania".
+Jest wystarczająco elastyczna, aby pasować zarówno początkującym jak i
+weteranom. SimplePie skupia się na szybkości, prostocie użycia,
+kompatybilności i zgodności ze standardami.
 
 %prep
 %setup -q -n "SimplePie\ %{version}"
