@@ -9,6 +9,7 @@ Group:		Development/Languages/PHP
 Source0:	http://www.simplepie.org/downloads/%{pkgname}_%{version}.zip
 # Source0-md5:	8c640521de5830fc2d7fe5622cebb71c
 URL:		http://www.simplepie.org/
+BuildRequires:	rpm-build >= 4.4.9-96
 BuildRequires:	rpmbuild(macros) >= 1.461
 Requires:	php(mbstring)
 Requires:	php(pcre)
