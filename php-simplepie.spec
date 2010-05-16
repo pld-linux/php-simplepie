@@ -11,6 +11,7 @@ Source0:	http://www.simplepie.org/downloads/%{pkgname}_%{version}.zip
 URL:		http://www.simplepie.org/
 BuildRequires:	rpm-build >= 4.4.9-96
 BuildRequires:	rpmbuild(macros) >= 1.461
+BuildRequires:	unzip
 Requires:	libxml2 >= 1:2.7.2
 Requires:	php(mbstring)
 Requires:	php(pcre)
