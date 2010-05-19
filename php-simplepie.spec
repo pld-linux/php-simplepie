@@ -6,11 +6,11 @@ Summary(pl.UTF-8):	SimplePie - bardzo szybka, łatwa w użyciu analiza feedów R
 Name:		php-simplepie
 Version:	1.2
 Release:	1
-License:	BSD
+License:	New BSD
 Group:		Development/Languages/PHP
 Source0:	http://github.com/rmccue/SimplePie/tarball/%{version}#%{pkgname}-%{version}.tgz
 # Source0-md5:	ecf30ac694cedcdc9200b7992ef0bb79
-Patch0:	build.patch
+Patch0:		build.patch
 URL:		http://www.simplepie.org/
 BuildRequires:	rpm-build >= 4.4.9-96
 BuildRequires:	rpmbuild(macros) >= 1.461
