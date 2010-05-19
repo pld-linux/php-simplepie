@@ -1,24 +1,31 @@
 %define		pkgname		simplepie
+%define		php_min_version 5.1.1
+%include	/usr/lib/rpm/macros.php
 Summary:	SimplePie: Super-fast, easy-to-use, RSS and Atom feed parsing in PHP
 Summary(pl.UTF-8):	SimplePie - bardzo szybka, łatwa w użyciu analiza feedów RSS i Atom w PHP
 Name:		php-simplepie
-Version:	1.0.1
+Version:	1.2
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
-Source0:	http://www.simplepie.org/downloads/%{pkgname}_%{version}.zip
-# Source0-md5:	8c640521de5830fc2d7fe5622cebb71c
+Source0:	http://github.com/rmccue/SimplePie/tarball/%{version}#%{pkgname}-%{version}.tgz
+# Source0-md5:	ecf30ac694cedcdc9200b7992ef0bb79
 URL:		http://www.simplepie.org/
 BuildRequires:	rpm-build >= 4.4.9-96
 BuildRequires:	rpmbuild(macros) >= 1.461
 BuildRequires:	unzip
 Requires:	libxml2 >= 1:2.7.2
-Requires:	php(mbstring)
-Requires:	php(pcre)
-Requires:	php(xml)
-Requires:	php-common >= 3:4.3
-Suggests:	php(curl)
-Suggests:	php(zlib)
+Requires:	php-common >= 4:%{php_min_version}
+Requires:	php-date
+Requires:	php-libxml
+Requires:	php-mbstring
+Requires:	php-mysql
+Requires:	php-pcre
+Requires:	php-xml
+Requires:	php-xmlreader
+Suggests:	php-curl
+Suggests:	php-idna_convert
+Suggests:	php-zlib
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,7 +43,9 @@ weteranom. SimplePie skupia się na szybkości, prostocie użycia,
 kompatybilności i zgodności ze standardami.
 
 %prep
-%setup -q -n 'SimplePie %{version}'
+%setup -qc
+mv *-SimplePie-*/* .
+mv README.markdown README
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -48,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.txt
+%doc README
 %{php_data_dir}/%{pkgname}.inc
