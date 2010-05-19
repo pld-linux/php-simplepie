@@ -8,23 +8,23 @@ Version:	1.2
 Release:	2
 License:	New BSD
 Group:		Development/Languages/PHP
-Source0:	http://github.com/rmccue/SimplePie/tarball/%{version}#%{pkgname}-%{version}.tgz
+Source0:	http://github.com/rmccue/SimplePie/tarball/%{version}#/%{pkgname}-%{version}.tgz
 # Source0-md5:	ecf30ac694cedcdc9200b7992ef0bb79
 Patch0:		build.patch
 URL:		http://www.simplepie.org/
 BuildRequires:	rpm-build >= 4.4.9-96
+BuildRequires:	rpm-php-pearprov
 BuildRequires:	rpmbuild(macros) >= 1.461
-BuildRequires:	unzip
 Requires:	libxml2 >= 1:2.7.2
 Requires:	php-common >= 4:%{php_min_version}
 Requires:	php-date
 Requires:	php-mbstring
-# MySQL for cache
-Suggests:	php-mysql
 Requires:	php-pcre
 Requires:	php-xml
 Suggests:	php-curl
 Suggests:	php-idna_convert
+# MySQL for cache
+Suggests:	php-mysql
 Suggests:	php-xmlreader
 Suggests:	php-zlib
 BuildArch:	noarch
