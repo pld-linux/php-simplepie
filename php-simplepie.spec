@@ -4,12 +4,12 @@
 Summary:	SimplePie: Super-fast, easy-to-use, RSS and Atom feed parsing in PHP
 Summary(pl.UTF-8):	SimplePie - bardzo szybka, łatwa w użyciu analiza feedów RSS i Atom w PHP
 Name:		php-simplepie
-Version:	1.2
-Release:	2
+Version:	1.2.1
+Release:	1
 License:	New BSD
 Group:		Development/Languages/PHP
-Source0:	http://github.com/rmccue/SimplePie/tarball/%{version}#/%{pkgname}-%{version}.tgz
-# Source0-md5:	ecf30ac694cedcdc9200b7992ef0bb79
+Source0:	https://nodeload.github.com/simplepie/simplepie/tarball/%{version}#/%{pkgname}-%{version}.tgz
+# Source0-md5:	1ed5e112c9b2f97699d1096d4ee4c52b
 Patch0:		build.patch
 URL:		http://www.simplepie.org/
 BuildRequires:	rpm-build >= 4.4.9-96
@@ -51,19 +51,18 @@ kompatybilności i zgodności ze standardami.
 
 %prep
 %setup -qc
-mv *-SimplePie-*/* .
-mv README.markdown README
+mv *-simplepie-*/* .
 %patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_data_dir}
-cp -a %{pkgname}.inc $RPM_BUILD_ROOT%{php_data_dir}
+cp -p %{pkgname}.inc $RPM_BUILD_ROOT%{php_data_dir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc README.markdown
 %{php_data_dir}/%{pkgname}.inc
