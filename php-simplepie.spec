@@ -5,7 +5,7 @@ Summary:	SimplePie: Super-fast, easy-to-use, RSS and Atom feed parsing in PHP
 Summary(pl.UTF-8):	SimplePie - bardzo szybka, łatwa w użyciu analiza feedów RSS i Atom w PHP
 Name:		php-simplepie
 Version:	1.2.1
-Release:	2
+Release:	3
 License:	New BSD
 Group:		Development/Languages/PHP
 Source0:	https://nodeload.github.com/simplepie/simplepie/tarball/%{version}#/%{pkgname}-%{version}.tgz
@@ -16,10 +16,10 @@ BuildRequires:	rpm-build >= 4.4.9-96
 BuildRequires:	rpm-php-pearprov
 BuildRequires:	rpmbuild(macros) >= 1.461
 Requires:	libxml2 >= 1:2.7.2
+Requires:	php(core) >= %{php_min_version}
 Requires:	php(mbstring)
 Requires:	php(pcre)
 Requires:	php(xml)
-Requires:	php-common >= 4:%{php_min_version}
 Requires:	php-date
 Suggests:	php-curl
 Suggests:	php-idna_convert
