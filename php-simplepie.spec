@@ -8,7 +8,7 @@ Version:	1.2.1
 Release:	4
 License:	New BSD
 Group:		Development/Languages/PHP
-Source0:	https://nodeload.github.com/simplepie/simplepie/tarball/%{version}#/%{pkgname}-%{version}.tgz
+Source0:	https://nodeload.github.com/simplepie/simplepie/tarball/%{version}?/%{pkgname}-%{version}.tgz
 # Source0-md5:	1ed5e112c9b2f97699d1096d4ee4c52b
 Patch0:		build.patch
 Patch1:		php5.3-notices.patch
