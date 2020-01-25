@@ -1,6 +1,5 @@
 %define		pkgname		simplepie
 %define		php_min_version 5.1.1
-%include	/usr/lib/rpm/macros.php
 Summary:	SimplePie: Super-fast, easy-to-use, RSS and Atom feed parsing in PHP
 Summary(pl.UTF-8):	SimplePie - bardzo szybka, łatwa w użyciu analiza feedów RSS i Atom w PHP
 Name:		php-simplepie
